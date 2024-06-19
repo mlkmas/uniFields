@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "SubTable";
+}
+<h1>Subjects Table</h1>
+<table width="100%" class=" table-striped " style=" background-color:gainsboro">
+    <tr>
+        <th width="15%">name</th>
+        <th>field</th>
+        <th>psymin</th>
+        <th>sum</th>
+        <th>YE</th>
+        <th>YE</th>
+        <th>Details</th>
+    </tr>
+    var u=0;
+    int i=0;
+    @foreach (var c in ViewData["Subs"] as List<List<ClassSubject>>)
+      
+
+              @foreach (var f in c as List<ClassSubject>)
+        {
+<tr>
+    <td>@f.SubName  </td>
+
+    <td>@f.SubField</td>
+
+    <td>@f.SubPsyMin</td>
+
+    <td>@f.SubSum</td>
+    <td>@f.SubYE</td>
+    <td>@f.UnivID </td>
+    <td>
+        @Html.ActionLink("Details", "SubInfo", "Subject", f)
+
+
+
+    </td>
+</tr>
+        }
+      
+    }
+</table>

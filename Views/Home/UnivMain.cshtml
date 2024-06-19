@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "UnivMain";
+}
+
+
+<form class="needs-validation" novalidate  asp- action="U1" enctype="multipart/form-data" style=" background-color:blanchedalmond ; align-content: center ">
+    <div class="form-row" >
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip01">Universety</label>
+            <input required type="text" class="form-control" id="validationTooltip01" asp- for="UnivName"  >
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip02">Place</label>
+            <input required type="text" class="form-control" id="validationTooltip01" asp- for="UnivPlace">
+            <div class="valid-tooltip">
+                Looks good!
+            </div>
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="col-md-6 mb-3">
+            <label for="validationTooltip03">Age</label>
+            <input type="text" class="form-control" id="validationTooltip03" required>
+            <div class="invalid-tooltip">
+                Please Enter Your Age
+            </div>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label for="validationTooltip04">Subject</label>
+            <select class="custom-select" id="validationTooltip04" required>
+                <option selected disabled value="">Choose...</option>
+                <option>Engineering</option>
+            </select>
+            
+        </div>
+        
+    </div>
+    <button class="btn btn-primary" style=" background-color:indianred " type="submit">Submit form</button>
+</form>

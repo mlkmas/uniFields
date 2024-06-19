@@ -1,0 +1,17 @@
+﻿@model Universities2.Models.ClassUniv2     
+@{
+    ViewData["Title"] = "Univ2";
+}
+<h1 >Univ2</h1>
+>
+    <div class=" col-5" >
+        <div class=" row " style=" background-color : aliceblue  ; align-content:center  ">
+
+            <img src="~/images/@Model.UnivPhoto" style=" width:400px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">name:@Model.UnivName</h5>
+                <p class="card-text">place:@Model.UnivPlace</p>
+
+            </div>
+        </div>
+    </div>

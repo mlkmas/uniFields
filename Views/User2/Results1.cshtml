@@ -1,0 +1,47 @@
+﻿@model Universities2.Models.ClassUser2
+@{
+    ViewData["Title"] = "Q3View";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+    <!DOCTYPE HTML>
+    <html>
+    <head>
+
+        <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                {
+                    title: {
+                        text: "Gaming Consoles Sold in 2012"
+                    },
+                    legend: {
+                        maxWidth: 350,
+                        itemWidth: 120
+                    },
+                    data: [
+                        {
+                            type: "pie",
+                            showInLegend: true,
+                            legendText: "{indexLabel}",
+                            dataPoints: [
+                                { y: @Model.Rs0 , indexLabel: "PlayStation 3" },
+                                { y: @Model.Rs1 , indexLabel: "Wii" },
+                                { y:  @Model.Rs2, indexLabel: "Xbox 360" },
+                                { y: @Model.Rs3, indexLabel: "Nintendo DS" },
+                                { y:  @Model.Rs4, indexLabel: "PSP" },
+                                { y:  @Model.Rs5, indexLabel: "Nintendo 3DS" },
+                               
+                            ]
+                        }
+                    ]
+                });
+            chart.render();
+        }
+        </script>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    </head>
+    <body>
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+    </body>
+</html>

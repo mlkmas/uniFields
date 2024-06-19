@@ -1,0 +1,13 @@
+﻿@model Universities2.Models.ClassUniv2
+@{
+    ViewData["Title"] = "AddUniversity";
+}
+<h1 >AddNewUniversity</h1>
+<form method="post" asp-action="F1" enctype="multipart/form-data">
+    University Name<input type="text" asp- for="UnivName" placeholder=" اسم الجامعة" />
+    University Place<input type="text" asp- for="UnivPlace" placeholder=" مكان الجامعة" />
+    University Photo<input type="file" asp- for="UnivPhoto" placeholder=" صورة الجامعة" />
+    University Email<input type="email" asp- for="UnivEmail" placeholder=" ايميل الجامعة" />
+    University Open<input type="checkbox" asp- for="UnivOpen" placeholder=" هل الجامعة مفتوحة" />
+    University Submit<input required type="submit" value="Add New ClassUniv2" />
+</form>

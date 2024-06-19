@@ -1,0 +1,28 @@
+﻿@model Universities2.Models.ClassUser2
+@{
+    ViewData["Title"] = "QView";
+}
+
+var x=@Model.UserA;
+@Html.EditorForModel()
+<!-- var f5; Html.ActionLink("Details", "Univ2", "Home", f5) -->
+@(Model.UserC +1 )
+<div class="form-row">
+    <form method="get" asp-action="DoUp" enctype="multipart/form-data">
+
+        <input type="hidden" asp-for="UserPassword" />
+        <input type="hidden" asp-for="UserGender" />
+        <input type="hidden" asp-for="UserEmail " />
+        <input type="hidden" asp-for="UserID" />
+        <input type="hidden" asp-for="UserAge " />
+
+        <input type="hidden" asp-for="UserBgrtSum " />
+        <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" value="calculation" asp-for="UserI">
+            <label class="form-check-label" for="UserI">
+                1
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

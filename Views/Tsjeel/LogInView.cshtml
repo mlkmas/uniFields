@@ -1,0 +1,74 @@
+﻿@{
+    ViewData["Title"] = "LogInView";
+}
+<h2>LoginView</h2>
+
+@Html.ActionLink("sign up", "AddNewUserView", "User2")
+
+<link href="~/Designs/mainuser/HumeUserStyleSheet.css" rel="stylesheet" />
+
+
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<form asp-action="DoLogin" method="post">
+    <div class="login-wrap">
+        <div class="login-html">
+            <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
+            <input id="tab-2" type="radio" name="tab" class="for-pwd"><label for="tab-2" class="tab">Forgot Password</label>
+
+            <div class="login-form">
+                <div class="sign-in-htm">
+                    <div class="form-group">
+                        <label for="the_email">Email address</label>
+                        <input required type="email" name="the_email" class="form-control" id="the_email" aria-describedby="emailHelp">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="the_password">Password</label>
+                        <input required type="password" name="the_password" class="form-control" id="the_password">
+                    </div>
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign In">
+                    </div>
+                    <div class="hr"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+<!--
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6  border border-info rounded">
+        <form asp-action="DoLogin" method="post">
+            <div class="form-group">
+                <h3><img src="~/images/login.png" width="48" />LoginView</h3>
+            </div>
+            <div class="form-group">
+                <label for="the_email">Email address</label>
+                <input required type="email" name="the_email" class="form-control" id="the_email" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="the_password">Password</label>
+                <input required type="password" name="the_password" class="form-control" id="the_password">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    <div class="group">
+                <label for="the_email" class="label">Username or Email</label>
+                <input id="the_email" type="text" class="input">
+            </div>
+            <div class="group">
+                <label for="the_password" class="label">Password</label>
+                <input id="the_password" type="password" class="input" data-type="password">
+            </div>
+</div> -->

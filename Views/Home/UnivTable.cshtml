@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewData["Title"] = "UnivTable";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+
+<h1>Universities Table</h1>
+<table width="100%" class=" table-striped " style=" background-color:gainsboro">
+    <tr>
+        <th width="15%">name</th>
+        <th>photo</th>
+        <th>place</th>
+        <th>Gmail</th>
+        <th>Open</th>
+        <th>Details</th>
+    </tr>
+    @foreach (var f5 in ViewData["Univs"] as List<ClassUniv2>)
+    {
+        <tr>
+            <td>@f5.UnivName  </td>
+            <td><img src="~/images/@f5.UnivPhoto" style=" width:40px" /> </td>
+            <td>@f5.UnivPlace</td>
+            <td>@f5.UnivEmail</td>
+            <td>@f5.UnivOpen</td>
+            <td>
+                @Html.ActionLink("Details", "Univ2", "Home", f5)
+
+                <a href="Home/studentborowing?student.id=@f5.UnivName"></a>
+                <a href="Home/studentborowing?student.id=@f5.UnivName"></a>
+                <a href="Home/studentborowing?student.id=@f5.UnivName"></a>
+
+            </td>
+        </tr>
+    }
+</table>

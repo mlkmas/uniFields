@@ -1,0 +1,22 @@
+﻿@{
+    ViewData["Title"] = "UnivRan";
+}
+<h1>بطاقة حمراء-جامعة مغلقة</h1>
+@foreach (var u2 in ViewData["ClassUniv2"] as List<ClassUniv2>)
+{
+    
+    <div class='card mb-3@(u2.UnivOpen ? "text-white bg-light mb-3" : "text-white bg-danger mb-3")' style=" width:400px">
+        <img src="/images/@u2.UnivPhoto  " class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">@u2.UnivName</h5>
+            <p class="card-text"> place @u2.UnivPlace.</p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+
+
+    
+
+
+
+}
